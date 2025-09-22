@@ -1,11 +1,49 @@
 {
   "version": 3,
   "targets": {
-    "net8.0": {}
+    "net8.0": {
+      "FlightBooking.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "FlightBooking.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/FlightBooking.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/FlightBooking.Application.dll": {}
+        }
+      },
+      "FlightBooking.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/FlightBooking.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/FlightBooking.Domain.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "FlightBooking.Application/1.0.0": {
+      "type": "project",
+      "path": "../FlightBooking.Application/FlightBooking.Application.csproj",
+      "msbuildProject": "../FlightBooking.Application/FlightBooking.Application.csproj"
+    },
+    "FlightBooking.Domain/1.0.0": {
+      "type": "project",
+      "path": "../FlightBooking.Domain/FlightBooking.Domain.csproj",
+      "msbuildProject": "../FlightBooking.Domain/FlightBooking.Domain.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net8.0": []
+    "net8.0": [
+      "FlightBooking.Application >= 1.0.0",
+      "FlightBooking.Domain >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\gaura\\.nuget\\packages\\": {},
@@ -39,7 +77,14 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\gaura\\source\\repos\\FlightBooking.WebApi\\FlightBooking.Application\\FlightBooking.Application.csproj": {
+              "projectPath": "C:\\Users\\gaura\\source\\repos\\FlightBooking.WebApi\\FlightBooking.Application\\FlightBooking.Application.csproj"
+            },
+            "C:\\Users\\gaura\\source\\repos\\FlightBooking.WebApi\\FlightBooking.Domain\\FlightBooking.Domain.csproj": {
+              "projectPath": "C:\\Users\\gaura\\source\\repos\\FlightBooking.WebApi\\FlightBooking.Domain\\FlightBooking.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
